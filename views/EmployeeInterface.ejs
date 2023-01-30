@@ -1,0 +1,127 @@
+<style>
+    .root {
+
+        display: flex;
+        height: 100%;
+        width: 100%;
+        background: #1abc9c;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subdiv {
+        display: flex;
+        width: 1000px;
+        background: #8395a7;
+        border-radius: 2%;
+        justify-content: center;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .rowstyle {
+        width: 900px;
+        margin: 10px;
+    }
+</style>
+<html>
+<title>Employee Interface</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+<script src="/javascripts/project.js"></script>
+
+<form action="/codepanda/submitemployee" method="post" enctype="multipart/form-data">
+    <div class="root">
+        <div class="subdiv">
+            <div class="row">
+                <div class="col" style="font-size:20px; font-weight: bold; letter-spacing: 1px;">
+                    <img src="/images/employee.jpg" width=60 />
+                    Employee Interface
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control rowstyle" placeholder="First Name" name="fname">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control rowstyle" placeholder="Last  Name" name="lname">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="date" class="form-control rowstyle" placeholder="Date of Birth" name="dob">
+                </div>
+                <div class="col">
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="number" class="form-control rowstyle" placeholder="Mobile Number" name="mn">
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control rowstyle" placeholder="Emailid" name="em">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control rowstyle" placeholder="Address" name="address">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <select class="form-control rowstyle" id="state" name="state">
+                        <option>-States-</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-control rowstyle" id="city" name="city">
+                        <option>-City-</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <input type="number" class="form-control rowstyle" placeholder="ZipCode" id="zipcode"
+                        name="zipcode">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control rowstyle" placeholder="Qualification" name="qual">
+                </div>
+                <div class="col">
+                    <select name="depart" class="form-control rowstyle">
+                        <option>-Department-</option>
+                        <option>Computer Science</option>
+                        <option>Information Technology</option>
+                        <option>Civil</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="file" class="form-control rowstyle" placeholder="File Upload" name="image">
+                </div>
+            </div>
+            <div class="row rowstyle">
+                <div class="col" style="display: flex; align-items: center; justify-content: center; ">
+                    <button type="submit" style="font-size: 18; width: 350;" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="col" style="display: flex; align-items: center; justify-content: center; ">
+                    <button type="reset" style="font-size: 18; width: 350;" class="btn btn-primary">Reset</button>
+                </div>
+            </div>
+            <div class="row rowstyle">
+                <div class="col" style="display: flex; align-items: center; justify-content: center; " >
+                    <h3><%=msg %></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</html>
